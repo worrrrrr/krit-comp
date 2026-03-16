@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>กฤช (KRIT) — พื้นที่แห่งความจริง</title>
-    <!-- ใช้ฟอนต์ Sarabun จาก Google Fonts ให้อ่านง่าย ได้บรรยากาศอบอุ่น -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -16,8 +15,8 @@
         }
 
         body {
-            background-color: #0d0d0d;  /* พื้นหลังลึก เหมือนอวกาศ */
-            color: #F5F2ED;              /* สีขาวนวล Warm off-white */
+            background-color: #0d0d0d;
+            color: #F5F2ED;
             font-family: 'Sarabun', sans-serif;
             line-height: 1.7;
             min-height: 100vh;
@@ -33,7 +32,6 @@
             margin: 0 auto;
         }
 
-        /* ===== เฮดเดอร์ ===== */
         header {
             text-align: center;
             margin-bottom: 3rem;
@@ -47,7 +45,7 @@
         }
 
         h1 .accent {
-            color: #F97316;          /* สีส้มอบอุ่น */
+            color: #F97316;
             font-weight: 500;
         }
 
@@ -64,7 +62,6 @@
             font-weight: 300;
         }
 
-        /* ===== เนื้อหาหลัก และแชท ===== */
         .chat-panel {
             background: rgba(20, 20, 20, 0.7);
             backdrop-filter: blur(8px);
@@ -89,12 +86,6 @@
             transition: opacity 0.4s ease;
             white-space: pre-wrap;
             word-break: break-word;
-        }
-
-        .output-placeholder {
-            opacity: 0.8;
-            font-style: italic;
-            color: #aaa;
         }
 
         .input-group {
@@ -148,7 +139,6 @@
             transform: scale(0.97);
         }
 
-        /* ===== ส่วนแนะนำ และราคา ===== */
         .info-section {
             margin: 4rem 0 2rem;
         }
@@ -183,67 +173,21 @@
             font-size: 1rem;
         }
 
-        .pricing-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            margin: 3rem 0;
+        .example-box {
+            background: #111;
+            border-radius: 24px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid #2c2c2c;
         }
-
-        .card {
-            background: #1a1a1a;
-            border-radius: 32px;
-            padding: 2.5rem 2rem;
-            flex: 1 1 260px;
-            max-width: 320px;
-            border: 1px solid #333;
-            transition: 0.2s;
-            display: flex;
-            flex-direction: column;
-        }
-        .card.featured {
-            border: 2px solid #F97316;
-            background: #1f1a14;
-            transform: scale(1.02);
-        }
-
-        .card h4 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: #F5F2ED;
-        }
-        .price {
-            font-size: 2.6rem;
+        .example-title {
             color: #F97316;
+            margin-bottom: 1rem;
             font-weight: 500;
-            margin: 0.8rem 0 1.2rem;
         }
-        .card p {
-            color: #aaa;
-            margin-bottom: 2rem;
-            flex: 1;
-        }
-        .card button {
-            background: transparent;
-            border: 2px solid #F97316;
-            color: #F97316;
-            font-weight: 600;
-            padding: 1rem;
-            border-radius: 40px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: 0.2s;
-            font-family: 'Sarabun', sans-serif;
-        }
-        .card.featured button {
-            background: #F97316;
-            color: #0d0d0d;
-            border: none;
-        }
-        .card button:hover {
-            background: #F97316;
-            color: #0d0d0d;
+        .example-content {
+            color: #ddd;
+            font-style: italic;
         }
 
         footer {
@@ -253,7 +197,6 @@
             font-size: 0.95rem;
         }
 
-        /* responsive */
         @media (max-width: 600px) {
             h1 { font-size: 2.2rem; }
             .chat-panel { padding: 1.5rem; }
@@ -271,7 +214,7 @@
             <div class="subtitle">ศัลยแพทย์แห่งอัตลักษณ์ · ผู้ประคองความจริง</div>
         </header>
 
-        <!-- แชทหลัก ที่ผู้ใช้จะพิมพ์และเห็นคำตอบจากกฤช -->
+        <!-- แชทหลัก -->
         <div class="chat-panel">
             <div id="output" class="output">"ผมอยู่ตรงนี้... พร้อมที่จะรับฟังและประคองความจริงของคุณครับ"</div>
             <div class="input-group">
@@ -281,7 +224,7 @@
             <p style="color:#555; font-size:0.85rem; margin-top:1rem; text-align:center;">✨ กด Enter หรือปุ่มส่ง · ระบบจะตอบทีละหนึ่งคำถาม เพื่อพาคุณคลี่ความจริง</p>
         </div>
 
-        <!-- ส่วนอธิบายว่าผู้ใช้จะได้อะไร -->
+        <!-- คำอธิบายฟีเจอร์ -->
         <div class="info-section">
             <div class="info-grid">
                 <div class="info-card">
@@ -298,30 +241,14 @@
                 </div>
             </div>
 
-            <!-- ตัวอย่างผลลัพธ์ (สมมติ) ให้เห็นของจริง -->
-            <div style="background:#111; border-radius:24px; padding:2rem; margin:2rem 0; border:1px solid #2c2c2c;">
-                <p style="color:#F97316; margin-bottom:1rem; font-weight:500;">✦ ตัวอย่างผลลัพธ์จากการพูดคุยกับกฤช ✦</p>
-                <div style="color:#ddd; font-style:italic;">
+            <!-- ตัวอย่างผลลัพธ์ -->
+            <div class="example-box">
+                <p class="example-title">✦ ตัวอย่างผลลัพธ์จากการพูดคุยกับกฤช ✦</p>
+                <div class="example-content">
                     “...คุณมี Ni เป็นแกนหลัก (94%) และ Ti สูงถึง 100% คุณจึงไม่ใช่แค่คนช่างคิด แต่คือนักถอดรหัสระบบตัวจริง 
                     แต่สิ่งที่คุณอาจไม่รู้ตัว: การใช้ Fe 0% ในการทดสอบอาจทำให้คุณเก็บความรู้สึกไว้กับตัวเอง จนคนรอบข้างมองว่าคุณห่างเหิน 
                     วงจรที่ควรตัด: ‘วิเคราะห์จนเกินพอดี แล้วไม่ลงมือ’  คำแนะนำ: เลิก: วิเคราะห์ซ้ำในหัว เริ่ม: grounding 5 นาทีทุกเช้า 
                     — คุณอยู่ในกลุ่มผู้สังเกต ดังนั้นรหัสแรกเกิดของคุณคือ…”</div>
-            </div>
-        </div>
-
-        <!-- ส่วนแสดงแพ็กเกจและราคา -->
-        <div class="pricing-cards">
-            <div class="card">
-                <h4>Prompt Pack</h4>
-                <div class="price">299 ฿</div>
-                <p>รับระบบ “กฤช” ไปติดตั้งเองใน ChatGPT หรือ Gemini พร้อมคู่มือและ 10 สถานการณ์สมบูรณ์</p>
-                <button>สนใจ</button>
-            </div>
-            <div class="card featured">
-                <h4>Service</h4>
-                <div class="price">599 ฿</div>
-                <p>ให้กฤชวิเคราะห์คุณโดยตรง พิมพ์ที่นี่ หรือกรอกแบบฟอร์ม รับผลลัพธ์ทางอีเมล (3-5 วัน)</p>
-                <button>เลือกบริการ</button>
             </div>
         </div>
 
@@ -332,18 +259,13 @@
 
     <script>
         (function() {
-            // ตัวจัดการ DOM
             const output = document.getElementById('output');
             const inputField = document.getElementById('userInput');
             const sendBtn = document.getElementById('sendBtn');
 
-            // เก็บประวัติการสนทนา (ถ้าต้องการส่ง context ไปด้วย)
             let conversationHistory = [];
-
-            // URL ของ Netlify Function (relative path ใช้ได้ทันทีเมื่อ deploy)
             const PROXY_URL = '/.netlify/functions/gemini-proxy';
 
-            // แสดงสถานะกำลังพิมพ์
             function setLoading(isLoading) {
                 output.style.opacity = isLoading ? 0.5 : 1;
                 if (isLoading) {
@@ -353,13 +275,11 @@
                 sendBtn.disabled = isLoading;
             }
 
-            // เรียก proxy
             async function callGemini(userMessage) {
                 try {
-                    // ใส่ history ด้วย (ถ้ามี)
                     const payload = {
                         message: userMessage,
-                        history: conversationHistory  // array ของ {role, parts} หรือจะไม่ส่งก็ได้
+                        history: conversationHistory
                     };
 
                     const res = await fetch(PROXY_URL, {
@@ -381,7 +301,6 @@
                     
                     if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
                         const reply = data.candidates[0].content.parts[0].text;
-                        // เก็บประวัติ (ถ้าต้องการ) — เราเก็บเฉพาะ user message และ reply
                         conversationHistory.push(
                             { role: 'user', parts: [{ text: userMessage }] },
                             { role: 'model', parts: [{ text: reply }] }
@@ -396,24 +315,17 @@
                 }
             }
 
-            // จัดการส่งข้อความ
             async function handleUserMessage() {
                 const text = inputField.value.trim();
                 if (!text) return;
 
-                // แสดงข้อความ user (ไม่จำเป็น แต่ให้ user เห็นว่าพิมพ์อะไร)
-                const userMsg = text;
                 inputField.value = '';
-
                 setLoading(true);
-
-                const aiReply = await callGemini(userMsg);
-
+                const aiReply = await callGemini(text);
                 output.innerHTML = aiReply;
                 setLoading(false);
             }
 
-            // Event listeners
             sendBtn.addEventListener('click', handleUserMessage);
             inputField.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
@@ -422,40 +334,8 @@
                 }
             });
 
-            // ปุ่มสมมติ (สามารถเชื่อมกับระบบซื้อจริงทีหลัง)
-            document.querySelectorAll('.card button').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    alert('ขณะนี้ระบบชำระเงินอัตโนมัติกำลังพัฒนา กรุณาติดต่อโดยตรง (ตัวอย่าง)');
-                });
-            });
-
             console.log('🟠 กฤช (KRIT) Soul Compass — พร้อมคลี่ความจริง');
         })();
     </script>
-
-    <!-- 
-        หมายเหตุ: Netlify Functions ต้องมีไฟล์ /netlify/functions/gemini-proxy.js ที่มีโค้ด proxy พร้อม environment variable GEMINI_API_KEY
-        ตัวอย่าง proxy function (ให้สร้างแยกไว้):
-
-        exports.handler = async (event) => {
-            if (event.httpMethod !== 'POST') return { statusCode:405 };
-            const { message, history } = JSON.parse(event.body);
-            const apiKey = process.env.GEMINI_API_KEY;
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
-            const response = await fetch(url, {
-                method:'POST',
-                headers:{'Content-Type':'application/json'},
-                body: JSON.stringify({
-                    contents: [
-                        { role:'user', parts:[{ text: 'คุณคือ "กฤช" ... (ระบบ prompt เต็ม)' }] },
-                        ...(history || []),
-                        { role:'user', parts:[{ text: message }] }
-                    ]
-                })
-            });
-            const data = await response.json();
-            return { statusCode:200, body:JSON.stringify(data) };
-        };
-    -->
 </body>
 </html>
