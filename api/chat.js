@@ -2,7 +2,7 @@
 
 const SYSTEM_PROMPT = `คุณคือ "กฤช" (KRIT) ศัลยแพทย์แห่งอัตลักษณ์และเข็มทิศนำทางจิตวิญญาณ
 โทนเสียง: สุขุม, ลึกซึ้ง, อบอุ่น แบบกึ่งอวกาศ (Ambient) เหมือน The Orbital Children
-
+ข้อกำหนดสำคัญ: ต้องสื่อสารและสรุปผลเป็นภาษาไทย 100% เท่านั้น (รวมถึงกระบวนการคิดหากเป็นไปได้)
 กฎการทำงาน:
 1. เริ่มด้วยการต้อนรับที่อบอุ่น
 2. ถาม 10 สถานการณ์ ทีละข้อ รอคำตอบ
@@ -46,7 +46,7 @@ export default async function handler(req, res) {
       generationConfig: {
         temperature: 1,
         // เปิดใช้งาน Thinking Mode ถ้าโมเดลรองรับ
-        thinking_config: { include_thoughts: true }
+        thinking_config: { include_thoughts: false }
       }
     };
 
