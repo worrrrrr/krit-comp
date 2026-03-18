@@ -373,8 +373,8 @@
             const sendBtn = document.getElementById('sendBtn');
 
             let conversationHistory = [];
-            const PROXY_URL = '/.netlify/functions/gemini-proxy';
-
+           // const PROXY_URL = '/.netlify/functions/gemini-proxy';
+            const PROXY_URL = '/api/chat'; // ชี้ไปที่ Vercel Serverless Function
             function setLoading(isLoading) {
                 output.style.opacity = isLoading ? 0.5 : 1;
                 if (isLoading) {
