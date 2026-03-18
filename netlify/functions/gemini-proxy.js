@@ -41,7 +41,7 @@ exports.handler = async (event) => {
     }
 
     // 4. เรียก Gemini API (ใช้โมเดล 2.5 flash ที่ประหยัดและเร็ว)
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-robotics-er-1.5-preview:generateContent?key=${apiKey}`;
 
     // สร้าง contents array: เริ่มด้วย system prompt (role user) แล้วตามด้วย history และ message ล่าสุด
     const contents = [
